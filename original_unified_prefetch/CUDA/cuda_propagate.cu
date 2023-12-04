@@ -95,8 +95,8 @@ void CUDA_Propagate(const int sx, const int sy, const int sz, const int bord,
                     float *qp, float *qc)
 {
 
-    dim3 threadsPerBlock(BSIZE_X/2, BSIZE_Y/2);
-    dim3 numBlocks(sx / (threadsPerBlock.x*2), sy / (threadsPerBlock.y*2));
+    dim3 threadsPerBlock(BSIZE_X, BSIZE_Y);
+    dim3 numBlocks(sx / threadsPerBlock.x, sy / threadsPerBlock.y);
 
     kernel_Propagate<<<numBlocks, threadsPerBlock>>>(sx, sy, sz, bord, dx, dy, dz, dt, it, ch1dxx, ch1dyy, ch1dzz, ch1dxy,
                                                      ch1dyz, ch1dxz, v2px, v2pz, v2sz, v2pn, pp, pc, qp, qc);
