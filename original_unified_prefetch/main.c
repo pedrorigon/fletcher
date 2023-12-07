@@ -244,7 +244,9 @@ int main(int argc, char** argv) {
   // - calls InsertSource
   // - do AbsorbingBoundary and DumpSliceFile, if needed
   // - Finalize
-  Model(st, iSource, dtOutput, sPtr, sx, sy, sz, bord, dx, dy, dz, dt, it, pp, pc, qp, qc, vpz, vsv, epsilon, delta, phi, theta);
 
+  double modeltime = wtime();
+  Model(st, iSource, dtOutput, sPtr, sx, sy, sz, bord, dx, dy, dz, dt, it, pp, pc, qp, qc, vpz, vsv, epsilon, delta, phi, theta);
+  printf ("Model Execution time (s) is %lf\n", wtime() - modeltime);
   CloseSliceFile(sPtr);
 }

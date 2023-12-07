@@ -102,7 +102,7 @@ for (int it=1; it<=st; it++) {
     tSim=it*dt;
     if (tSim >= tOut) {
       DRIVER_Update_pointers(sx,sy,sz,pc);
-      DumpSliceFile(sx,sy,sz,pc,sPtr);
+      //DumpSliceFile(sx,sy,sz,pc,sPtr);
       tOut=(++nOut)*dtOutput;
 #ifdef _DUMP
       DRIVER_Update_pointers(sx,sy,sz,pc);
@@ -130,7 +130,7 @@ for (int it=1; it<=st; it++) {
 
   // Dump Execution Metrics
   
-  printf ("Execution time (s) is %lf\n", walltime);
+  printf ("kernel Execution time (s) is %lf\n", walltime);
   printf ("MSamples/s %.0lf\n", MSamples);
   printf ("Memory High Water Mark is %ld %s\n",HWM, HWMUnit);
 
