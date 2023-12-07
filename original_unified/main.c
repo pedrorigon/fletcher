@@ -9,6 +9,7 @@
 #include "driver.h"
 #include "fletcher.h"
 #include "model.h"
+#include "walltime.h"
 
 enum Form {ISO, VTI, TTI};
 

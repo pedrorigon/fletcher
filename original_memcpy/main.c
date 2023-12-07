@@ -10,6 +10,7 @@
 #include "fletcher.h"
 #include "model.h"
 #include "CUDA/cuda_stuff.h"
+#include "walltime.h"
 
 enum Form
 {
