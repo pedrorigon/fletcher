@@ -229,11 +229,11 @@ int main(int argc, char** argv) {
   int izEnd=sz-1;
 
   SlicePtr sPtr;
-  sPtr=OpenSliceFile(ixStart, ixEnd, iyStart, iyEnd, izStart, izEnd, dx, dy, dz, dt, fNameSec);
+  //sPtr=OpenSliceFile(ixStart, ixEnd, iyStart, iyEnd, izStart, izEnd, dx, dy, dz, dt, fNameSec);
 
-  DumpSliceFile(sx,sy,sz,pc,sPtr);
+ // DumpSliceFile(sx,sy,sz,pc,sPtr);
 #ifdef _DUMP
-  DumpSlicePtr(sPtr);
+ // DumpSlicePtr(sPtr);
   //  DumpSliceSummary(sx,sy,sz,sPtr,dt,it,pc,0);
 #endif
   
@@ -251,5 +251,5 @@ int main(int argc, char** argv) {
 
   printf ("Model Execution time (s) is %lf\n", wtime() - modeltime);
 
-  CloseSliceFile(sPtr);
+  //CloseSliceFile(sPtr);
 }
