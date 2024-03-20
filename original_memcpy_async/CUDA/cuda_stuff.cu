@@ -137,7 +137,7 @@ void CUDA_Initialize(const int sx, const int sy, const int sz, const int bord,
    CUDA_CALL(cudaMemset(dev_qDy, 0, msize_vol));
 
    CUDA_CALL(cudaGetLastError());
-   CUDA_CALL(cudaDeviceSynchronize());
+   // CUDA_CALL(cudaDeviceSynchronize());
 
    size_t freeMem, totalMem;
    CUDA_CALL(cudaMemGetInfo(&freeMem, &totalMem));
